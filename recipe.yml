@@ -1,0 +1,24 @@
+name: "Web-Beest - Site admininistration"
+description: "Modules for Drupal site administration" 
+type: "Admin"
+install:
+  - admin_toolbar
+  - admin_toolbar_tools
+  - config_ignore
+  - config_split
+  - masquerade
+  - rabbit_hole
+config:
+  import:
+    admin_toolbar: '*'
+    admin_toolbar_tools: '*'
+    config_ignore: '*'
+    masquerade: '*'
+    rabbit_hole: '*'
+  strict: false
+  actions:
+    user.role.administrator:
+      createIfNotExists:
+        label: 'Administrator'
+      grantPermissions:
+        - 'masquerade as any user'

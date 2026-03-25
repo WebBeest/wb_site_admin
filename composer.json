@@ -1,0 +1,21 @@
+{
+	"name": "webbeest/site_admin",
+	"description": "Site-admin recipe for Drupal 11",
+	"type": "drupal-recipe",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Patrick C. Kannekens",
+			"homepage": "https://www.web-beest.nl",
+			"role": "Maintainer",
+			"email": "info@web-beest.nl"
+		}
+	],
+	"require": {
+		"drupal/admin_toolbar": "^3.6",
+		"drupal/config_ignore": "^3.3",
+		"drupal/config_split": "^2.0",
+		"drupal/masquerade": "^2.1",
+		"drupal/rabbit_hole": "^1.2"
+	}
+}
