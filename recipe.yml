@@ -8,6 +8,7 @@ install:
   - config_split
   - masquerade
   - rabbit_hole
+  - trash
 config:
   import:
     admin_toolbar: '*'
@@ -21,4 +22,11 @@ config:
       createIfNotExists:
         label: 'Administrator'
       grantPermissions:
+        - 'administer trash'
         - 'masquerade as any user'
+    user.role.editor:
+      createIfNotExists:
+        label: 'Editor'
+      grantPermissions:
+        - 'access trash'
+        - 'view deleted entities'
